@@ -1,4 +1,4 @@
-# Miscellanneous C++ library header files
+# Miscellaneous C++ library header files
 
 This is a collection of C++ header-only/module interface files I created for doing simple tasks.
 
