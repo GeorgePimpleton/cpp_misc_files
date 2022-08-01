@@ -10,6 +10,6 @@
 
 1. The Random Toolkit.  Makes using the C++ <random> library almost as easy as the C library random functions.
 
-2(?). I need a roundtoit so I can add description of the other files.
+2. I need a roundtoit so I can add description of the other files.
 
 If you find the files useful let me know, if you find better ways to craft the code really let me know!
