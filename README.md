@@ -6,10 +6,18 @@
     
     b. Three random-related Proposals - WG21 N3547
 
-  A collection of custom C++ header-only/module interface files I created for doing simple tasks.  .hpp & .cppm  Add the file(s) to your project and code away using the supplied functionality.
+A collection of custom C++ header-only/module interface files I created for doing simple tasks.  .hpp & .cppm  Add the file(s) to your project and code away using the supplied functionality.  The file descriptions should be self evident, but....
 
-1. The Random Toolkit.  Makes using the C++ <random> library almost as easy as the C library random functions.
+I'm gonna include example code snippets at a later date showing how to use the various libs.
 
-2. I need a roundtoit so I can add description of the other files.
+1. The Random Toolkit - Makes using the C++ <random> library almost as easy as the C library random functions.
 
-If you find the files useful let me know, if you find better ways to craft the code really let me know!
+2. A simple menu system to get numeric input based on a collection of C++ strings used for the menu options
+
+3. Program Pauser - Use to prevent console mode apps from automatically closing when the program ends.  There's a stand-alone function and a class object available.
+
+4. Console Colors - Win32 API library so a console mode app can be colorful.
+
+5. Console Clear - Win32 API library to clear the contents of a console mode window.
+
+If you find the files and examples useful let me know, if you find better ways to craft the code really let me know!
