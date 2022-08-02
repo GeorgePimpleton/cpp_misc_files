@@ -20,4 +20,6 @@ I'm gonna include example code snippets at a later date showing how to use the v
 
 5. Console Clear Toolkit - Win32 API library to clear the contents of a console mode window.
 
+There is a freeware custom icon file, Console.ico, you can add to your Win32 apps.
+
 If you find the files and examples useful let me know, if you find better ways to craft the code really let me know!
