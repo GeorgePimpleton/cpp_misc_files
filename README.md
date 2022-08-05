@@ -1,10 +1,13 @@
 # Miscellaneous custom C++ library files
 
-0. Several C++ ISO Committee working group papers on C++11's <random> library.
+### Several C++ ISO Committee working group papers on C++11's <random> library.
 
     a. Random Number Generation in C++11 - WG21 N3551.pdf
     
     b. Three random-related Proposals - WG21 N3547
+
+
+### The code snippets
 
 A collection of custom C++ header-only/module interface files I created for doing simple tasks.  .hpp & .cppm  Add the file(s) to your project and code away using the supplied functionality.  The file descriptions should be self evident, but....
 
@@ -20,6 +23,12 @@ I'm gonna include example code snippets at a later date showing how to use the v
 
 5. Console Clear Toolkit - Win32 API library to clear the contents of a console mode window.
 
+### Other stuff
+
 There is a freeware custom icon file, Console.ico, you can add to your Win32 apps.
+
+### Notes
+
+There may be links to websites or internet sources in these pages. Links can go stale. A search engine is your friend.
 
 If you find the files and examples useful let me know, if you find better ways to craft the code really let me know!
