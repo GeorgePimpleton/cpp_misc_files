@@ -11,7 +11,7 @@
 
 A collection of custom C++ header-only/module interface files I created for doing simple tasks.  .hpp & .cppm  Add the file(s) to your project and code away using the supplied functionality.  The file descriptions should be self evident, but....
 
-I'm gonna include example code snippets at a later date showing how to use the various libs.
+The code snippets now have some simple example code to show how to use the libraries.
 
 1. The Random Toolkit - Makes using the C++ <random> library almost as easy as the C library random functions.
 
