@@ -2,9 +2,9 @@
 
 ### Several C++ ISO Committee working group papers on C++11's <random> library.
 
-    a. Random Number Generation in C++11 - WG21 N3551.pdf
++ Random Number Generation in C++11 - WG21 N3551.pdf
     
-    b. Three random-related Proposals - WG21 N3547
++ Three random-related Proposals - WG21 N3547
 
 ### The code snippets
 
