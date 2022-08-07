@@ -6,7 +6,6 @@
     
     b. Three random-related Proposals - WG21 N3547
 
-
 ### The code snippets
 
 A collection of custom C++ header-only/module interface files I created for doing simple tasks.  .hpp & .cppm  Add the file(s) to your project and code away using the supplied functionality.  The file descriptions should be self evident, but....
