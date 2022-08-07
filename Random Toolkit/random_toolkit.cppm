@@ -75,7 +75,7 @@ namespace rtk
    // function for rolling dice, and checking if the # of pips is nonstandard
    export int roll_die(int pips)
    {
-      //check to see if the number of die pips is less than 2
+      // a die with a pip total of less than two is nonsensical
       if (pips < 2)
       {
          return -1;
