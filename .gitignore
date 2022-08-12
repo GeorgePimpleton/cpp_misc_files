@@ -1,0 +1,17 @@
+# Unwanted folders
+Debug/
+Release/
+x64/
+.vs/
+
+# Compile & misc files
+*.exe
+*.aps
+*.obj
+*.log
+*.tlog
+*.VC.db
+*.cache
+*.pdb
+*.pch
+*.user
