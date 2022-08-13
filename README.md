@@ -1,5 +1,7 @@
 # Miscellaneous custom C++ library files
 
+[![Language](https://img.shields.io/badge/Language%20-C++-blue.svg)](https://github.com/GeorgePimpleton/misc_files/)
+
 ### Several C++ ISO Committee working group papers on C++11's <random> library.
 
 + Random Number Generation in C++11 - WG21 N3551.pdf
