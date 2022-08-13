@@ -1,6 +1,6 @@
 # Miscellaneous custom C++ library files
 
-[![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/)
+[![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-brightgreen)](https://github.com/GeorgePimpleton/misc_files/)
 
 ### Several C++ ISO Committee working group papers on C++11's <random> library.
 
