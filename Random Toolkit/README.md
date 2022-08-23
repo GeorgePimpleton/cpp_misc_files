@@ -1,6 +1,6 @@
-# The Random Numbers Toolkit
+# The Random Numbers Toolkit (RTK)
 
-[![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/Random%20Toolkit/)
+[![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/tree/main/Random%20Toolkit)
 
 Makes using the C++ <random> library almost as easy as the C library random functions.  The idea is shamelessly stolen from "Random Number Generation in C++11 - WG21 N3551.pdf".
 
@@ -18,6 +18,6 @@ If you find the files and examples useful let me know, if you find better ways t
 
 ## Warning
 
-The .cppm module interface files require using C++20 (or later) as your language standard.  Currently there is only one compiler/IDE that can use modules: Visual Studio 2022.
+The .cppm module interface file require using C++20 (or later) as your language standard.  Currently there is only one compiler/IDE that can use modules: Visual Studio 2022.
 
 Use either the header or module interface file, do not use both!
