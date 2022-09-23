@@ -67,7 +67,7 @@ namespace rtk
    {
       static std::uniform_real_distribution<> dist { };
 
-      // a real distribution kinda goes flakey when the params are equal
+      // a real distribution kinda goes flakey when the params are equal, divide by zero will do that,
       // as well as reversed from expected
       if (from >= to) { throw std::invalid_argument("bad double distribution params"); }
 
