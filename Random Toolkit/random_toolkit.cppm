@@ -2,8 +2,8 @@
  *
  * C++20 module interface file */
 
- // shamelessly stolen and adapted from a C++ working paper: WG21 N3551
- // http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
+// shamelessly stolen and adapted from a C++ working paper: WG21 N3551
+// http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
 
 export module random_toolkit;
 
@@ -67,7 +67,9 @@ namespace rtk
    {
       static std::uniform_real_distribution<> dist { };
 
-      if (from > to) { throw std::invalid_argument("bad double distribution params"); }
+      // a real distribution kinda goes flakey when the params are equal
+      // as well as reversed from expected
+      if (from >= to) { throw std::invalid_argument("bad double distribution params"); }
 
       return dist(urng(), decltype(dist)::param_type { from, to });
    }
@@ -75,7 +77,7 @@ namespace rtk
    // function for rolling dice, and checking if the # of pips is nonstandard
    export int roll_die(int pips)
    {
-      // a die with a pip total of less than two is nonsensical
+      //check to see if the number of die pips is less than 2
       if (pips < 2)
       {
          return -1;

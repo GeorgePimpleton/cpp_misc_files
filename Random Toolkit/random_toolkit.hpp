@@ -27,7 +27,6 @@ namespace rtk
    // uses a seed sequence for better randomization
    inline void srand(bool FORCE_SEED = false)
    {
-      // create a seed sequence one time for the life of the program using the toolkit
       static const std::seed_seq::result_type seeds[] { std::random_device {} (),
                                                         std::seed_seq::result_type(std::chrono::system_clock::now().time_since_epoch().count()) };
 
@@ -55,7 +54,7 @@ namespace rtk
       }
    }
 
-   // two function overloads to obtain uniform distribution for ints and doubles
+   // two function overloads to obtain uniform distribution ints and doubles
    inline int rand(int from, int to)
    {
       static std::uniform_int_distribution<> dist { };
@@ -69,15 +68,17 @@ namespace rtk
    {
       static std::uniform_real_distribution<> dist { };
 
-      if (from > to) { throw std::invalid_argument("bad double distribution params"); }
+      // a real distribution kinda goes flakey when the params are equal
+      // as well as reversed from expected
+      if (from >= to) { throw std::invalid_argument("bad double distribution params"); }
 
       return dist(urng(), decltype(dist)::param_type { from, to });
    }
 
-   // function for rolling a die, checking if the # of pips is nonstandard
+   // function for rolling dice, and checking if the # of pips is nonstandard
    inline int roll_die(int pips)
    {
-      // a die with a pip total of less than two is nonsensical
+      // check to see if the number of die pips is less than 2
       if (pips < 2)
       {
          return -1;
