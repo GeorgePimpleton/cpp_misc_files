@@ -2,14 +2,15 @@
  *
  * C++20 module interface file */
 
-// shamelessly stolen and adapted from a C++ working paper: WG21 N3551
-// http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
+ // shamelessly stolen and adapted from a C++ working paper: WG21 N3551
+ // http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
 
 export module random_toolkit;
 
 import <chrono>;
 import <random>;
 import <stdexcept>;
+import <limits>;
 
 namespace rtk
 {
@@ -32,7 +33,7 @@ namespace rtk
       static std::seed_seq sseq(std::begin(seeds), std::end(seeds));
 
       // the URNG can't be reseeded unless forced
-      if (!seeded || FORCE_SEED)
+      if ( !seeded || FORCE_SEED )
       {
          urng().seed(sseq);
 
@@ -45,7 +46,7 @@ namespace rtk
    export void srand(signed seed, bool FORCE_SEED = false)
    {
       // the URNG can't be reseeded unless forced
-      if (!seeded || FORCE_SEED)
+      if ( !seeded || FORCE_SEED )
       {
          urng().seed(static_cast<unsigned>(seed));
 
@@ -58,7 +59,7 @@ namespace rtk
    {
       static std::uniform_int_distribution<> dist { };
 
-      if (from > to) { throw std::invalid_argument("bad int distribution params"); }
+      if ( from > to ) { throw std::invalid_argument("bad int distribution params"); }
 
       return dist(urng(), decltype(dist)::param_type { from, to });
    }
@@ -69,7 +70,10 @@ namespace rtk
 
       // a real distribution kinda goes flakey when the params are equal, divide by zero will do that,
       // as well as reversed from expected
-      if (from >= to) { throw std::invalid_argument("bad double distribution params"); }
+      if ( from >= to || ((to - from) > std::numeric_limits<double>::max()) )
+      {
+         throw std::invalid_argument("bad double distribution params");
+      }
 
       return dist(urng(), decltype(dist)::param_type { from, to });
    }
@@ -78,7 +82,7 @@ namespace rtk
    export int roll_die(int pips)
    {
       //check to see if the number of die pips is less than 2
-      if (pips < 2)
+      if ( pips < 2 )
       {
          return -1;
       }

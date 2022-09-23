@@ -1,7 +1,8 @@
-﻿import <array>;
+﻿// test chassis for the random toolkit
+
+import <array>;
 import <iostream>;
 import <numeric>;
-
 import <random>;  // imports are NOT #includes!
 
 import random_toolkit;
@@ -17,50 +18,50 @@ int main()
    std::array<card, 52> deck { };
 
    // create the cards, 0 (zero) to 51
-   // setting warning level four causes std::iota heartburn from <numeric>
+   // setting MSVC++ warning level four causes std::iota heartburn from <numeric>
    std::iota(deck.begin(), deck.end(), 0);
 
    // lambdas to display the card in text representation:
-   auto rank = [](card c) { return "AKQJT98765432"[c % 13]; };
-   auto suit = [](card c) { return "SHDC"[c / 13]; };
+   auto rank = [] (card c) { return "AKQJT98765432"[ c % 13 ]; };
+   auto suit = [] (card c) { return "SHDC"[ c / 13 ]; };
 
-   for (card count { }; card c : deck)
+   for ( card count { }; card c : deck )
    {
       std::cout << rank(c) << suit(c) << ' ';
       count++;
 
-      if (0 == (count % 13)) { std::cout << '\n'; }
+      if ( 0 == (count % 13) ) { std::cout << '\n'; }
    }
    std::cout << '\n';
 
    // shuffle the deck:
    std::shuffle(deck.begin(), deck.end(), rtk::urng());
 
-   for (card count { }; card c : deck)
+   for ( card count { }; card c : deck )
    {
       std::cout << rank(c) << suit(c) << ' ';
       count++;
 
-      if (0 == (count % 13)) { std::cout << '\n'; }
+      if ( 0 == (count % 13) ) { std::cout << '\n'; }
    }
    std::cout << '\n';
 
-   for (unsigned loop { }; loop < 50; loop++)
+   for ( unsigned loop { }; loop < 50; loop++ )
    {
       std::cout << rtk::roll_die(6) << ' ';
 
-      if ((loop + 1) % 20 == 0) { std::cout << '\n'; }
+      if ( (loop + 1) % 20 == 0 ) { std::cout << '\n'; }
    }
    std::cout << "\n\n";
 
    // lambda to "flip a coin," returning a text representation of coin side
-   auto flip_coin = []() { return (rtk::rand(0, 1) ? "Heads" : "Tails"); };
+   auto flip_coin = [] () { return (rtk::rand(0, 1) ? "Heads" : "Tails"); };
 
-   for (size_t loop { }; loop < 25; loop++)
+   for ( size_t loop { }; loop < 25; loop++ )
    {
       std::cout << flip_coin() << '\t';
 
-      if ((loop + 1) % 8 == 0) { std::cout << '\n'; }
+      if ( (loop + 1) % 8 == 0 ) { std::cout << '\n'; }
    }
    std::cout << '\n';
 
@@ -83,7 +84,7 @@ int main()
       int itest { rtk::rand(5, 2) };
    }
 
-   catch (const std::exception& e)
+   catch ( const std::exception& e )
    {
       std::cout << "\n>>> A standard exception was caught, with message '" << e.what() << "'\n";
    }
@@ -93,7 +94,7 @@ int main()
       double dtest { rtk::rand(5.3, 2.8) };
    }
 
-   catch (const std::exception& e)
+   catch ( const std::exception& e )
    {
       std::cout << "\n>>> A standard exception was caught, with message '" << e.what() << "'\n";
    }
