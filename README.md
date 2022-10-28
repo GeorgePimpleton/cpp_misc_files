@@ -2,7 +2,7 @@
 
 [![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/)
 
-### Several C++ ISO Committee working group papers on C++11's random library.
+### C++ ISO Committee working group papers on C++11's random library.
 
 + Random Number Generation in C++11 - WG21 N3551.pdf
     
@@ -14,7 +14,7 @@ A collection of custom C++ header-only/module interface files I created for doin
 
 The code snippets now have some simple example code to show how to use the libraries.
 
-1. The Random Toolkit - Makes using the C++ <random> library almost as easy as the C library random functions.
+1. The Random Toolkit - Makes using the C++ random library almost as easy as the C library random functions.
 
 2. Menu Toolkit - A simple menu system to get numeric input based on a collection of C++ strings used for the menu options
 
