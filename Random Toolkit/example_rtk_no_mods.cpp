@@ -17,7 +17,6 @@ int main()
    std::array<card, 52> deck { };
 
    // create the cards, 0 (zero) to 51
-   // setting MSVC++ warning level four causes std::iota heartburn from <numeric>
    std::iota(deck.begin(), deck.end(), 0);
 
    // lambdas to display the card in text representation:
