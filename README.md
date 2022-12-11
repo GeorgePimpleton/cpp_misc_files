@@ -36,6 +36,6 @@ These files were originally created for my own use, as learning projects.  They 
 
 ## Warning
 
-The .cppm module interface files require using C++20 (or later) as your language standard.  Currently there is only one compiler/IDE that can use modules: Visual Studio 2022.
+The .cppm module interface files require using C++20 (or later) as your language standard.  Currently (11 December 2022) there is only one compiler/IDE that can use modules: Visual Studio 2022.  Module support is still iffy for other compiler suites, though that is gradually changing.
 
 Use either the header or module interface file, do not use both!
