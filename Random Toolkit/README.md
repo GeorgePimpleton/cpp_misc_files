@@ -1,6 +1,6 @@
 # The Random Numbers Toolkit (RTK)
 
-[![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/tree/main/Random%20Toolkit)
+[![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/)
 
 Makes using the C++ <random> library almost as easy as the C library random functions.  The idea is shamelessly stolen from "Random Number Generation in C++11 - WG21 N3551.pdf".
 
