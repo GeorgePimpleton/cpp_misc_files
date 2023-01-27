@@ -1,12 +1,12 @@
-# The Random Numbers Toolkit (RTK)
+# The Menu Toolkit
 
 [![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/)
 
-Makes using the C++ <random> library almost as easy as the C library random functions.  The idea is shamelessly stolen from "Random Number Generation in C++11 - WG21 N3551.pdf".
+A simple header-only library for a standardized menu system.
 
 ## Usage
 
-There are two separate versions of the Random Toolkit: a pre C++20 header only version and a C++20 module interface file.  Use only one of the files!
+There are two separate versions of the Menu Toolkit: a pre C++20 header only version and a C++20 module interface file.  Use only one of the files!
 
 See the example .cpp files for basic "how to" instructions.
 
