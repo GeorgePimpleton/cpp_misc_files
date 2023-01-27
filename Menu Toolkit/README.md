@@ -2,11 +2,11 @@
 
 [![Language](https://img.shields.io/badge/Language-C%2B%2B%20%26%20C%2B%2B20-blue)](https://github.com/GeorgePimpleton/misc_files/)
 
-A simple header-only library for a standardized menu system.
+A simple menu system to get numeric input based on a collection of C++ strings used for the menu options.
 
 ## Usage
 
-There are two separate versions of the Menu Toolkit: a pre C++20 header only version and a C++20 module interface file.  Use only one of the files!
+There are two separate versions of the Menu Toolkit: a pre C++20 header-only version and a C++20 module interface file.  Use only one of the files!
 
 See the example .cpp files for basic "how to" instructions.
 
