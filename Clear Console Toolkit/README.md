@@ -4,9 +4,14 @@
 
 A Win32 API library to clear the contents of a console mode window.  This was more experimentation, not something useful.
 
+## Versions
+
+- V1.0 - Don't use.
+- V1.1 - MS recommended use of virtual terminal sequences, use this.
+
 ## Usage
 
-There are two separate versions of the Clear Console Toolkit: a pre C++20 header only version and a C++20 module interface file.  Use only one of the files!
+There are two separate versions of the Clear Console Toolkit for each version: a pre C++20 header only version and a C++20 module interface file.  Use only one of the files!
 
 See the example .cpp files for basic "how to" instructions.
 

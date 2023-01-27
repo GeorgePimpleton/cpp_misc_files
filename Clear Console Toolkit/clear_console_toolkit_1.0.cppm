@@ -1,11 +1,13 @@
-// Win32 SDK specific for clearing the console screen
+// Win32 SDK specific for clearing the console screen, modularized
+// V1.0
 
-#ifndef CONSOLE_CLEAR_HPP
-#define CONSOLE_CLEAR_HPP
+module;
 
 #include <windows.h>
 
-inline void clear_screen(char fill = ' ')
+export module clear_console_toolkit_1_0;
+
+export void clear_screen(char fill = ' ')
 {
    COORD                      crd { 0,0 };
    CONSOLE_SCREEN_BUFFER_INFO csbi;
@@ -20,5 +22,3 @@ inline void clear_screen(char fill = ' ')
 
    SetConsoleCursorPosition(console, crd);
 }
-
-#endif

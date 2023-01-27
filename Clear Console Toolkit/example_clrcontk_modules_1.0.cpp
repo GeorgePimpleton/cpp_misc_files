@@ -1,4 +1,6 @@
-#include <iostream>
+import <iostream>;
+
+import clear_console_toolkit_1_0;
 
 void _pause()
 {
@@ -14,8 +16,6 @@ void _pause()
    // until an endline character is reached
    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
-
-#include "clear_console_toolkit.hpp"
 
 int main()
 {

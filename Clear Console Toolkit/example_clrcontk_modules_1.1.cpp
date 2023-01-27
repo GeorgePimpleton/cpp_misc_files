@@ -1,6 +1,6 @@
 import <iostream>;
 
-import clear_console_toolkit;
+import clear_console_toolkit_1_1;
 
 void _pause()
 {
