@@ -34,6 +34,8 @@ There may be links to websites or internet sources in these pages. Links can go 
 
 These files were originally created for my own use, as learning projects.  They were not created to share.  If you find the files and examples useful let me know; if you find better ways to craft the code really do let me know!
 
+The file(s) are provided as-is, no warranty or suitability for use is even implied.
+
 ## Warning
 
 The .cppm module interface files require using C++20 (or later) as your language standard.  Currently (11 December 2022) there is only one compiler/IDE that can use modules: Visual Studio 2022.  Module support is still iffy for other compiler suites, though that is gradually changing.
