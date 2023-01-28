@@ -1,6 +1,6 @@
 /* user created functions and classes for flushing the input stream and pausing the program
  *
- * version 1.0 (not likely to change or be modularized)
+ * version 1.0.1a updated to not use underscore
  *
  * C++ Header: program_pauser_toolkit.hpp */
 
@@ -10,7 +10,7 @@
 #include <iostream>
 #include <limits>
 
-inline void _pause()
+inline void pause()
 {
    std::cout << "\nPress ENTER to continue...";
 
@@ -29,17 +29,17 @@ class ProgramPauser
 {
 public:
      ProgramPauser() { }
-    ~ProgramPauser() { _Pause(); }
+    ~ProgramPauser() { Pause(); }
 
 public:
-   inline void _Pause() const;
+   inline void Pause() const;
 };
 
 using PP = ProgramPauser;
 
-inline void ProgramPauser::_Pause() const
+inline void ProgramPauser::Pause() const
 {
-   _pause();
+   pause();
 }
 
 #endif
