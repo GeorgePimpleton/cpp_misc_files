@@ -20,7 +20,9 @@ The file(s) are provided as-is, no warranty or suitability for use is even impli
 
 ### C++ Correctness Warning
 
-This toolkit knowingly violates a suggested guideline of never having an identifier begin with a single or double underscore.  That's what happens when code snippets are crafted for personal-use only and are never intended for public consumption.
+~~This toolkit knowingly violates a suggested guideline of never having an identifier begin with a single or double underscore.  That's what happens when code snippets are crafted for personal-use only and are never intended for public consumption.~~
+
+This defect has been corrected in 1.0.1a
 
 ## Warning
 
