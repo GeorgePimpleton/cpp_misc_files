@@ -1,4 +1,5 @@
-// "easy" menu utility
+// "simple and easy" menu utility
+// v1.0
 
 #ifndef MENU_TOOLKIT
 #define MENU_TOOLKIT

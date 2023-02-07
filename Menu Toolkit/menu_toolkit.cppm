@@ -1,4 +1,5 @@
-// "easy" menu utility
+// "simple and easy" menu utility
+// v1.0
 
 // modularized for C++20!
 
