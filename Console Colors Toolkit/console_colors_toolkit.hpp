@@ -1,5 +1,12 @@
-// header file to color text and background in Windows® console applications
+// header file to color text and background in Windows® console applications, 
+// v1.0a
 
+/* adapted and updated from the CPlusPlus article:
+
+   https://cplusplus.com/articles/Eyhv0pDG/
+
+*/
+   
 #ifndef CONSOLE_COLORS_TOOLKIT
 #define CONSOLE_COLORS_TOOLKIT
 
