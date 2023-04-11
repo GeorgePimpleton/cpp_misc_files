@@ -2,10 +2,10 @@
  *
  * pre-C++20 header file */
 
-// v1.1
+ // v1.2
 
- // shamelessly stolen and adapted from a C++ working paper: WG21 N3551
- // http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
+  // shamelessly stolen and adapted from a C++ working paper: WG21 N3551
+  // http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
 
 #ifndef RANDOM_TOOLKIT
 #define RANDOM_TOOLKIT
@@ -19,7 +19,7 @@ namespace rtk
 {
    static bool seeded { false };
 
-   inline std::mt19937& urng()
+   inline std::mt19937& urng( )
    {
       static std::mt19937 URNG { };
 
@@ -30,15 +30,15 @@ namespace rtk
    // uses a seed sequence for better randomization
    inline void srand(bool FORCE_SEED = false)
    {
-      static const std::seed_seq::result_type seeds[] { std::random_device {} (),
-                                                        std::seed_seq::result_type(std::chrono::system_clock::now().time_since_epoch().count()) };
+      static const std::seed_seq::result_type seeds[ ] { std::random_device {} (),
+                                                         std::seed_seq::result_type(std::chrono::system_clock::now( ).time_since_epoch( ).count( )) };
 
       static std::seed_seq sseq(std::begin(seeds), std::end(seeds));
 
       // the URNG can't be reseeded unless forced
       if ( !seeded || FORCE_SEED )
       {
-         urng().seed(sseq);
+         urng( ).seed(sseq);
 
          seeded = true;
       }
@@ -51,7 +51,7 @@ namespace rtk
       // the URNG can't be reseeded unless forced
       if ( !seeded || FORCE_SEED )
       {
-         urng().seed(static_cast<unsigned>(seed));
+         urng( ).seed(static_cast<unsigned>(seed));
 
          seeded = true;
       }
@@ -64,7 +64,7 @@ namespace rtk
 
       if ( from > to ) { throw std::invalid_argument("bad int distribution params"); }
 
-      return dist(urng(), decltype(dist)::param_type { from, to });
+      return dist(urng( ), decltype(dist)::param_type { from, to });
    }
 
    inline double rand(double from, double to)
@@ -73,12 +73,12 @@ namespace rtk
 
       // a real distribution kinda goes flakey when the params are equal, divide by zero will do that,
       // as well as reversed from expected
-      if ( from >= to || ((to - from) > std::numeric_limits<double>::max()) )
+      if ( !(from < to && ((to - from) <= std::numeric_limits<double>::max( ))) )
       {
          throw std::invalid_argument("bad double distribution params");
       }
 
-      return dist(urng(), decltype(dist)::param_type { from, to });
+      return dist(urng( ), decltype(dist)::param_type { from, to });
    }
 
    // function for rolling dice, and checking if the # of pips is nonstandard
