@@ -2,7 +2,7 @@
  *
  * C++20 module interface file */
 
- // v1.2
+ // v1.3
 
   // shamelessly stolen and adapted from a C++ working paper: WG21 N3551
   // http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
@@ -56,8 +56,8 @@ namespace rtk
       }
    }
 
-   // two function overloads to obtain uniform distribution ints and doubles
-   export int rand(int from, int to)
+   // two functions to obtain uniform distribution ints and doubles
+   export int rand_int(int from, int to)
    {
       static std::uniform_int_distribution<> dist { };
 
@@ -66,7 +66,7 @@ namespace rtk
       return dist(urng( ), decltype(dist)::param_type { from, to });
    }
 
-   export double rand(double from, double to)
+   export double rand_rl(double from, double to)
    {
       static std::uniform_real_distribution<> dist { };
 
@@ -80,10 +80,21 @@ namespace rtk
       return dist(urng( ), decltype(dist)::param_type { from, to });
    }
 
+   // two function overloads to obtain uniform distribution ints and doubles
+   export int rand(int from, int to)
+   {
+      return rand_int(from, to);
+   }
+
+   export double rand(double from, double to)
+   {
+      return rand_rl(from, to);
+   }
+
    // function for rolling dice, and checking if the # of pips is nonstandard
    export int roll_die(int pips)
    {
-      //check to see if the number of die pips is less than 2
+      // check to see if the number of die pips is less than 2
       if ( pips < 2 )
       {
          return -1;
