@@ -1,10 +1,11 @@
 ﻿// test chassis for the random toolkit
 
-#include <array>
-#include <iostream>
-#include <numeric>
+import <array>;
+import <iostream>;
+import <numeric>;
+import <random>;  // imports are NOT #includes!
 
-#include "random_toolkit.hpp"
+import random_toolkit;
 
 int main( )
 {
@@ -75,7 +76,7 @@ int main( )
    }
    catch ( const std::exception& e )
    {
-      std::cerr << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
+      std::cout << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
    }
 
    try
@@ -84,7 +85,7 @@ int main( )
    }
    catch ( const std::exception& e )
    {
-      std::cerr << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
+      std::cout << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
    }
 
    try
@@ -93,7 +94,7 @@ int main( )
    }
    catch ( const std::exception& e )
    {
-      std::cerr << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
+      std::cout << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
    }
 
    try
@@ -102,7 +103,7 @@ int main( )
    }
    catch ( const std::exception& e )
    {
-      std::cerr << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
+      std::cout << "\n>>> A standard exception was caught, with message '" << e.what( ) << "'\n";
    }
 
    std::cout << "\nLet's see if we can have a non-standard die.....\nA die with 1 side: ";
