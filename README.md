@@ -22,7 +22,7 @@ The code snippets now have some simple example code to show how to use the libra
 5. Console Clear Toolkit - Win32 API library to clear the contents of a console mode window.
 
 ### Other stuff
-There is a freeware custom icon file, Console.ico, you can add to your Win32 apps.
+There is a freeware custom icon file, Console.ico, you can add to your Win32 apps as well as a couple of PDF books I have found useful: Pro Git, 2nd Edition and The Markdown Guide.
 
 ### Notes
 There may be links to websites or internet sources in these pages. Links can go stale. A search engine is your friend.
