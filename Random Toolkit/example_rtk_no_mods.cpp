@@ -1,5 +1,8 @@
 ﻿// test chassis for the random toolkit
 
+// the following program code requires C++20, the toolkit header does not
+// C++20 needed for the ranged-based for loops, lines 30 & 42
+
 #include <array>
 #include <iostream>
 #include <numeric>
