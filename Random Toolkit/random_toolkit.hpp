@@ -2,17 +2,18 @@
  *
  * pre-C++20 header file */
 
- // v1.3.1.1
+ // v1.3.1.2
 
   // shamelessly stolen and adapted from a C++ working paper: WG21 N3551
   // http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3551.pdf
 
-#ifndef RANDOM_TOOLKIT
-#define RANDOM_TOOLKIT
-
 // stop the WinAPI MIN/MAX macros from being used
 // instead of C++ std::/min/std::max
-#define NOMINMAX
+// use this define where <windows.h> is included
+// #define NOMINMAX
+
+#ifndef RANDOM_TOOLKIT
+#define RANDOM_TOOLKIT
 
 #include <chrono>
 #include <random>
