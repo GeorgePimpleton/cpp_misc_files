@@ -8,7 +8,11 @@ There are two separate versions of the Random Toolkit: a pre C++20 header only v
 
 See the example .cpp files for basic "how to" instructions.
 
+The toolkit files used in the examples are v1.3.1.2.
+
 ### Notes
+There are two different versions of the toolkit.  v1.3.1 lets the toolkit use the WinAPI min/max functions, v1.3.1.2 shows how to disable the WinAPI min/max functions (#define NOMINMAX) and uses the C++ min/max functionality.
+
 There may be links to websites or internet sources in these pages. Links can go stale. A search engine is your friend.
 
 If you find the files and examples useful let me know, if you find better ways to craft the code really let me know!
