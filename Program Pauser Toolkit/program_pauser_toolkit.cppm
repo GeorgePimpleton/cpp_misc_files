@@ -1,6 +1,6 @@
 /* user created functions and classes for flushing the input stream and pausing the program
  *
- * version 1.0 (not likely to change or be modularized)
+ * version 1.0.1a updated to not use underscore
  *
  * modularized for the 'halibut'
  *
