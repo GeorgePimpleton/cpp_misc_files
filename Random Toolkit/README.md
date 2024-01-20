@@ -11,7 +11,7 @@ See the example .cpp files for basic "how to" instructions.
 The toolkit files used in the examples are v1.3.1.2.
 
 ### Notes
-There are two different versions of the toolkit.  v1.3.1 lets the toolkit use the WinAPI min/max functions, v1.3.1.2 shows how to disable the WinAPI min/max functions (#define NOMINMAX) and uses the C++ min/max functionality.
+There are two different versions of the toolkit.  v1.3.1 lets the toolkit use the WinAPI min/max functions, v1.3.1.2 shows how to disable the WinAPI min/max functions (#define NOMINMAX) and uses the C++ min/max functionality.  v1.3.1.3 is for C++23 and currently will be a module file only.
 
 There may be links to websites or internet sources in these pages. Links can go stale. A search engine is your friend.
 
