@@ -31,6 +31,8 @@ These files were originally created for my own use, as learning projects.  They 
 
 The file(s) are provided as-is, no warranty or suitability for use is even implied.
 
+I updated the repo name to be clearly what these files are for, C++ files.  Duh!
+
 ## Warning
 The .cppm module interface files require using C++20 (or later) as your language standard.  Currently (11 December 2022) there is only one compiler/IDE that can use modules: Visual Studio 2022.  Module support is still iffy for other compiler suites, though that is gradually changing.
 
