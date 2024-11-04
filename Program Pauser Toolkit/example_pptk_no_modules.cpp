@@ -8,13 +8,13 @@ int main()
 
    std::cout << "\nThis uses a (hopefully) platform independent program pauser library!\n";
 
-   _pause();
+   pause();
 
    std::cout << "\nUsing the class based pauser.....\n";
 
    PP pp;
 
-   pp._Pause();
+   pp.Pause();
 
    std::cout << "\nWatch the class pause self destruct!!!!!\n";
 }
